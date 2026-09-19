@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1 mes · Potona hermosa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Syne:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=5" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="ambient" aria-hidden="true"></div>
+
+
+  <main>
+    <section class="intro" aria-label="Dedicatoria">
+      <div class="intro-copy">
+        <p class="intro-left">
+          Un mes a tu lado  
+        </p>
+        <p class="intro-right">
+          Todo lo bonito que imaginé que sería tener una relación, lo estoy viviendo contigo. Gracias por ser mi potona hermosa, mi amor, mi todo. 
+        </p>
+      </div>
+    </section>
+
+    <section id="playlist" class="playlist" aria-label="Playlist visual">
+
+  <div class="layout">
+
+    <!-- COLUMNA IZQUIERDA: ENCABEZADO Y CANCIONES -->
+    <div class="playlist-left">
+
+      <div class="playlist-head">
+        <p class="playlist-kicker"> --------------------------------------------------------------------- </p>
+
+        <h2>Soundtrack</h2>
+
+        <p class="playlist-sub">
+          Cinco canciones. Cinco pedacitos de lo que siento por ti.
+        </p>
+
+        <p class="progress-label">
+          <span id="heard-count">0</span> /
+          <span id="total-count">5</span> exploradas
+        </p>
+
+        <div
+          class="progress-track"
+          role="progressbar"
+          aria-valuemin="0"
+          aria-valuemax="5"
+          aria-valuenow="0"
+          id="progress-bar"
+        >
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <ol class="track-list" id="track-list"></ol>
+
+    </div>
+
+    <!-- COLUMNA DERECHA: REPRODUCTOR -->
+    <aside class="now-playing" id="now-playing" data-state="idle">
+
+      <div class="player-idle" id="player-idle">
+        <div class="idle-orb" aria-hidden="true"></div>
+
+        <p class="idle-kicker">Cuando quieras mi amorsote</p>
+
+        <h3 class="idle-title">Elige una canción</h3>
+
+        <p class="idle-text">
+          Toca cualquier canción en la izquierda, acá aparecerá un pequeño mensaje 
+          y el botón de play mi potona hermosa.
+        </p>
+
+        <p class="idle-hint">Empieza por la que quieras ♡</p>
+      </div>
+
+      <div class="player-active" id="player-active" hidden>
+
+        <div class="cover-wrap">
+          <div class="cover" id="track-cover" data-photo="pending">
+            <span class="cover-placeholder">Foto pronto</span>
+          </div>
+
+          <div class="vinyl" id="vinyl" aria-hidden="true"></div>
+        </div>
+
+        <div class="now-meta">
+          <p class="now-label">Ahora suena</p>
+
+          <h3 id="track-title"></h3>
+
+          <p id="track-artist" class="artist"></p>
+
+          <p id="track-note" class="note"></p>
+
+          <div class="embed-wrap">
+            <iframe
+              id="spotify-embed"
+              title="Reproductor de Spotify"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          <p class="embed-hint">
+            Tip: inicia sesión en Spotify en el navegador para escuchar
+            la canción completa dentro de la página.
+          </p>
+        </div>
+
+      </div>
+
+    </aside>
+
+  </div>
+
+</section>
+
+    <section class="finale" id="finale" aria-label="Mensaje final">
+  <div class="finale-stage">
+
+    <!-- Bloques traseros: cambia las rutas por tus fotos -->
+    <div class="finale-photo finale-photo-left">
+      <img src="photos/final-izquierda.png" alt="" />
+    </div>
+    <div class="finale-photo finale-photo-right">
+      <img src="photos/final.png" alt="" />
+    </div>
+
+    <!-- Bloque central: el mensaje -->
+    <div class="finale-card" id="finale-inner">
+      <p class="finale-lock" id="finale-lock">
+        Escucha (o abre) al menos 3 canciones para desbloquear el mensaje…
+      </p>
+      <div class="finale-open" id="finale-open" hidden>
+        <h2>1 mes, y apenas empezamos</h2>
+        <p>
+          Potona hermosa: gracias por este mes.
+          Espero que sean muchos muchos más mi amor, de verdad te extraño cada momento del día, me encantas mucho okei?. TE AMO MI AMOR (si le das al corazón 6 o 7 veces saldrán dos mensajes) <3
+        </p>
+        <button type="button" class="heart-btn" id="heart-btn" aria-label="Corazón sorpresa">♡</button>
+        <p class="easter" id="easter-msg" hidden>7 corazones. Igual que las ganas que tengo de verte.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+  </main>
+
+  <footer class="footer">
+    <p>Hecho con cariño · Mes 1 de ∞</p>
+  </footer>
+
+  <script src="app.js?v=5"></script>
+</body>
+</html>
