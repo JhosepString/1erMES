@@ -753,7 +753,7 @@ main {
 /* Laptops de poca altura: reproductor más compacto */
 @media (min-width: 900px) and (max-height: 800px) {
   .cover-wrap {
-    width: min(100%, 150px);
+    width: min(100%, 200px);
     margin-bottom: 0.8rem;
   }
   .now-playing {
